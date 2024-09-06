@@ -43,23 +43,6 @@ app.get("/seniorses", (req, res) => {
   res.send({ somedata: blabla });
 });
 
-app.use(blablaMiddleware);
-app.use(authGuard);
-
-app.get("/middlewares", (req, res) => {
-  //@ts-ignore
-  const blabla = req.blabla;
-  //@ts-ignore
-  res.send({ somedata: blabla });
-});
-
-app.get("/seniorses", (req, res) => {
-  //@ts-ignore
-  const blabla = req.bloblo;
-  //@ts-ignore
-  res.send({ somedata: blabla });
-});
-
 app.use(jsonBodyMiddleware);
 
 app.use("/courses", getCoursesRoutes());
